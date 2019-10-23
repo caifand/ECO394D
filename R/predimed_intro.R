@@ -32,8 +32,9 @@ xtabs(~group + event, data=predimed)
 
 # Use this table to estimate:
 #  P(event | Control diet)
+P1 = 97/(1945+97)
 #  P(event | any MedDiet)  
-
+P2 = (70+85)/(1945+97+2030+70+2097+85)
 # Note: you can use R just like a calculator, e.g. 3/(3+7)
 
 # tables for multiple factors
@@ -44,10 +45,12 @@ xtabs(~sex + group + event, data=predimed) %>% ftable
 
 # Use this table to estimate:
 #  P(event | Control diet, Male)
+P3 = 58/(754+58)
 #  P(event | Control diet, Female)
-#  P(event | Control diet, Male)
-#  P(event | Control diet, Female)
+P4 = 39/(1191+39)
 
 
 # We'll leave open the question of whether this is a real difference
 # or a "small sample" difference!  
+#  P(event | Mediterranean diet)
+P5 = (70+85)/(2030+70+2097+85)

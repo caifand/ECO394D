@@ -4,6 +4,7 @@ library(mosaic)
 
 # Data on annual returns of stocks, bonds, and savings account
 annual_returns = read.csv("../data/annual_returns_since1928.csv")
+annual_returns = annual_returns_since1928
 
 # first few lines
 head(annual_returns)
